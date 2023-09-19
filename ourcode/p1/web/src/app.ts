@@ -5,6 +5,10 @@ import cors from 'cors';
 
 require('dotenv').config();
 
+
+
+
+
 import * as middlewares from './middlewares/validators';
 import userRouter from './api/router/user';
 import adminRouter from './api/router/admin';
