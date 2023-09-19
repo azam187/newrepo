@@ -17,7 +17,7 @@ router.post('/update-role',adminMiddlewares, validateIncomingRequest(adminUpdate
 
 router.get('/users-filters',adminMiddlewares, validateIncomingRequest(adminUserFilterSchema), AdminHandler.getUsersByFilters);
 
-router.get('/list/:id',adminMiddlewares, AdminHandler.getUserById);
+router.get('/list/:id', AdminHandler.getUserById);
 
 
 
