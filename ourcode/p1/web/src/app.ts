@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
-
+const FFmpeg = require('ffmpeg');
 require('dotenv').config();
 
 
@@ -29,6 +29,10 @@ app.use(cors());
 app.use(express.json());
 dbConnect();
 
+
+
+    const process: any = new FFmpeg();
+console.log(process, 'server===========================')
 app.get<{}, DataResponse>('/', (req, res) => {
   res.json({
     message: 'Welcome!!',
