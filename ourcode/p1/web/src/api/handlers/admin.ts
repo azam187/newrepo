@@ -1,6 +1,7 @@
 import { Response, Request, NextFunction } from 'express';
 import { UserService } from '../services/user';
 import UserTokenRequest from '../interfaces/UserTokenRequest';
+const FFmpeg = require('ffmpeg');
 
 
 
@@ -62,36 +63,19 @@ const getUsersByFilters= async (
 
 // get users by id
 const getUserById= async (
-  req: UserTokenRequest,
+  req: Request,
   res: Response,
   next: NextFunction,
 ) => {
   try {
-    const user = req.userDetails;
+     const process: FFmpegProcess = new FFmpeg();
+    console.log(process, 'Test==========')
 
-    const { id } = req.params;
-
-    if(!id) {
-      return res.status(400).json({
-        success: false,
-        message: 'Please provide user id',
-      });
-    }
-
-    const exist = await UserService.getUserById(id);
-    if (!exist) {
-      return res.status(400).json({
-        success: false,
-        message: 'No such User found!',
-      });
-    }
-
-    const result = await UserService.getUserDetailsById(id);
 
     res.status(200).json({
       success: true,
       message: 'User fetched Successfully!!',
-      data : result
+      
     });
   } catch (error) {
     next(error);
