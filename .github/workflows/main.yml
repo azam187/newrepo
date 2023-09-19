@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master  # Change this to your default branch if needed
+    paths:
+      - p1/web # Only trigger on changes within the specified directory
 
 jobs:
   build-and-push:
