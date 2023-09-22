@@ -1,7 +1,7 @@
 import { Response, Request, NextFunction } from 'express';
 import { UserService } from '../services/user';
 import UserTokenRequest from '../interfaces/UserTokenRequest';
-const FFmpeg = require('ffmpeg');
+
 
 
 
@@ -68,8 +68,7 @@ const getUserById= async (
   next: NextFunction,
 ) => {
   try {
-     const process: FFmpegProcess = new FFmpeg();
-    console.log(process, 'Test==========')
+
 
 
     res.status(200).json({
