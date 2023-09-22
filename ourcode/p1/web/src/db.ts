@@ -12,13 +12,13 @@ const {
 let MONGO_URL = MONGODB_URL + MONGO_DBNAME;
 
 
-export const dbConnect = async () => {
-  try {
-    await mongoose.connect('mongodb://52.23.179.128:27017/');
-    console.log(`Connected successfully to ${MONGO_URL}`);
-  } catch (err) {
-    console.log('DB Connection Failed!');
-  }
-};
+// export const dbConnect = async () => {
+//   try {
+//     await mongoose.connect('mongodb://52.23.179.128:27017/');
+//     console.log(`Connected successfully to ${MONGO_URL}`);
+//   } catch (err) {
+//     console.log('DB Connection Failed!');
+//   }
+// };
 
 
