@@ -15,7 +15,7 @@ import userDetailsRouter from './api/router/userDetails';
 import categoryRouter from './api/router/category';
 import courseRouter from './api/router/course';
 import DataResponse from './api/interfaces/DataResponse';
-import { dbConnect } from './db';
+// import { dbConnect } from './db';
 
 
 const port = process.env.PORT || 7000;
@@ -32,19 +32,20 @@ dbConnect();
 
 app.get<{}, DataResponse>('/', (req, res) => {
   res.json({
-    message: 'Welcome!!',
+    message: 'Baby I love you, I cherish every moment we spend together.
+             My love for you grows stronger with each passing day.!!',
   });
 });
 
 
-app.use('/user', userRouter);
-app.use('/admin', adminRouter);
-app.use('/userdetail', userDetailsRouter);
-app.use('/category', categoryRouter);
-app.use('/course', courseRouter);
+// app.use('/user', userRouter);
+// app.use('/admin', adminRouter);
+// app.use('/userdetail', userDetailsRouter);
+// app.use('/category', categoryRouter);
+// app.use('/course', courseRouter);
 
-app.use(middlewares.apiNotFound);
-app.use(middlewares.errorHandler);
+// app.use(middlewares.apiNotFound);
+// app.use(middlewares.errorHandler);
 
 
 
