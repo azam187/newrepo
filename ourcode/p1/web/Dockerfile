@@ -18,4 +18,9 @@ COPY --chown=node:node . .
 # Expose the port your application will run on (7000)
 EXPOSE 7000
 
-CMD [ "npm", "run", "dev" ]
+# Build TypeScript code
+RUN npm run build
+
+# Command to run the application
+CMD [ "npm", "start" ]
+

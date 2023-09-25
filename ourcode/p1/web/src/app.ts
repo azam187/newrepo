@@ -18,7 +18,7 @@ import DataResponse from './api/interfaces/DataResponse';
 // import { dbConnect } from './db';
 
 
-const port = process.env.PORT || 7000;
+const port = 7000;
 
 const app = express();
 
@@ -26,14 +26,12 @@ app.use(morgan('dev'));
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
-dbConnect();
 
 
 
-app.get<{}, DataResponse>('/', (req, res) => {
-  res.json({
-    message: 'Baby I love you, I cherish every moment we spend together.
-             My love for you grows stronger with each passing day.!!',
+app.get<{}, DataResponse>('/home', (req, res) => {
+  return res.json({
+    message: 'Baby I love you, I cherish every moment we spend together,.My love for you grows stronger with each passing day.!!',
   });
 });
 
