@@ -18,7 +18,7 @@ import DataResponse from './api/interfaces/DataResponse';
 // import { dbConnect } from './db';
 
 
-const port = 7000;
+const port =8000;
 
 const app = express();
 
