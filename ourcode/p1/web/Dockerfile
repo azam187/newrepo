@@ -15,8 +15,7 @@ RUN npm install
 
 COPY --chown=node:node . .
 
-# Expose the port your application will run on (7000)
-EXPOSE 7000
+
 
 # Build TypeScript code
 RUN npm run build
