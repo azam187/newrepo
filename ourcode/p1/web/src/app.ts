@@ -8,13 +8,13 @@ require('dotenv').config();
 
 
 
-import * as middlewares from './middlewares/validators';
-import userRouter from './api/router/user';
-import adminRouter from './api/router/admin';
-import userDetailsRouter from './api/router/userDetails';
-import categoryRouter from './api/router/category';
-import courseRouter from './api/router/course';
-import DataResponse from './api/interfaces/DataResponse';
+// import * as middlewares from './middlewares/validators';
+// import userRouter from './api/router/user';
+// import adminRouter from './api/router/admin';
+// import userDetailsRouter from './api/router/userDetails';
+// import categoryRouter from './api/router/category';
+// import courseRouter from './api/router/course';
+// import DataResponse from './api/interfaces/DataResponse';
 // import { dbConnect } from './db';
 
 
@@ -29,7 +29,7 @@ app.use(express.json());
 
 
 
-app.get<{}, DataResponse>('/home', (req, res) => {
+app.get<{}, DataResponse>('/', (req, res) => {
   return res.json({
     message: 'Baby I love you, I cherish every moment we spend together,.My love for you grows stronger with each passing day.!!',
   });
